@@ -39,7 +39,7 @@ public class ViewEvento extends AppCompatActivity {
 
         arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
 
-        String nombre,descripcion,fecha;
+        String nombre,descripcion,fecha,hora;
         data=new Data(getApplicationContext());
         data.open();
         Cursor cursor=data.getAll();
@@ -49,7 +49,8 @@ public class ViewEvento extends AppCompatActivity {
                 descripcion=cursor.getString(1);
                 fecha=cursor.getString(2);
 
-                arrayAdapter.add(nombre+","+descripcion+","+fecha);
+                hora=cursor.getString(3);
+                arrayAdapter.add(nombre+","+descripcion+","+fecha+","+hora);
             }while (cursor.moveToNext());
             listView.setAdapter(arrayAdapter);
         }else {

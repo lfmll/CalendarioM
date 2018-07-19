@@ -54,4 +54,15 @@ public class Data {
         return cursor;
 
     }
+    public Cursor getTiempo(String fecha, String hora){
+        String[] whereArgs=new String[]{fecha,hora};
+        Cursor cursor=sqLiteDatabase.query(
+                SQLConstantes.TABLE_EVENTO,
+                SQLConstantes.ALL_COLUMNS,
+                SQLConstantes.SEARCH_BY_FECHAHORA,
+                whereArgs,
+                null,null,null
+        );
+        return cursor;
+    }
 }

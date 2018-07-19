@@ -18,6 +18,13 @@
         </activity>
         <activity android:name=".Vista.AddEvento" />
         <activity android:name=".Vista.ViewEvento"></activity>
+
+        <receiver
+            android:name=".presentador.AlarmReceiver"
+            android:process=":remote"/>
+        <service
+            android:name=".presentador.MyTestService"
+            android:exported="false"/>
     </application>
 
 </manifest>

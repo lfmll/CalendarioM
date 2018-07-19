@@ -37,7 +37,7 @@ public class CalendarioActivity extends AppCompatActivity implements CalendarVie
                             Intent intent=new Intent(getApplication(),AddEvento.class);
                             Bundle bundle=new Bundle();
                             bundle.putInt("dayOfMonth",dayOfMonth);
-                            bundle.putInt("month",month);
+                            bundle.putInt("month",month+1);
                             bundle.putInt("year",year);
                             intent.putExtras(bundle);
                             startActivity(intent);
@@ -46,7 +46,7 @@ public class CalendarioActivity extends AppCompatActivity implements CalendarVie
                             Intent intent=new Intent(getApplication(),ViewEvento.class);
                             Bundle bundle=new Bundle();
                             bundle.putInt("dayOfMonth",dayOfMonth);
-                            bundle.putInt("month",month);
+                            bundle.putInt("month",month+1);
                             bundle.putInt("year",year);
                             intent.putExtras(bundle);
                             startActivity(intent);
